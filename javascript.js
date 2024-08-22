@@ -9,21 +9,15 @@ function getComputerChoice() {
     }
     else {
         return "Scissors"
-    }
-    //teste the number
-    //if number<3:
-        //then rock
-    //if number >=3 and <6
-        //then scissors
-    //else paper    
+    }   
 }
-console.log(getComputerChoice())
-console.log(getComputerChoice())
-console.log(getComputerChoice())
-console.log(getComputerChoice())
-console.log(getComputerChoice())
-console.log(getComputerChoice())
-console.log(getComputerChoice())
-console.log(getComputerChoice())
-console.log(getComputerChoice())
-console.log(getComputerChoice())
+
+function getHumanChoice() {
+    choice = prompt("To play the game write the word between : Rock, Paper, Scissors")
+    choice = choice.toLowerCase()
+    return choice;
+    //chek if the word is correct
+    //if correct return the word as value messages
+}
+
+console.log(getHumanChoice())
