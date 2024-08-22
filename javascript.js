@@ -18,7 +18,6 @@ function getHumanChoice() {
     return choice;
 }
 
-
 function playRound(humanChoice, computerChoice) {
 
     if (humanChoice == computerChoice) {
@@ -51,11 +50,24 @@ function playRound(humanChoice, computerChoice) {
 function playGame() {
     humanScore = 0;
     computerScore =0;
+    i = 0;
 
+    while (i < 5) {
+        playRound(getHumanChoice(), getComputerChoice());
 
+        i+=1
+    }
+    if (humanScore > computerScore) {
+        console.log("You win the game! At " +humanScore+" against "+computerScore);
+    }
+    else if (computerScore > humanScore) {
+        console.log("You loose the game at "+humanScore +" against " +computerScore);
+    } else {
+        console.log('No one win '+humanScore+" against " +computerScore);
+    }
 }
 
-
+playGame();
 
 
 
